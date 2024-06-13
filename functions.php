@@ -134,7 +134,7 @@ function blissology_widgets_init() {
 }
 add_action( 'widgets_init', 'blissology_widgets_init' );
 
- */
+ 
 function blissology_scripts() {
 	wp_enqueue_style( 'blissology-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'blissology-style', 'rtl', 'replace' );
@@ -162,24 +162,96 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Custom Post Types
  */
-function create_custom_post_type() {
+function defaultPostTypeArgs($name) {
+  return [
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => $name),
+    'show_in_rest' => true,
+  ];
+};
+function blissologyCustomPosts() {
   register_post_type( 'accommodation',
-    array(
+    array_merge(
+      array(
         'labels' => array(
-            'name' => __( 'Accommodation' ),
-            'singular_name' => __( 'Room' )
+          'name' => __( 'Accommodation' ),
+          'all_items' => __( 'Rooms' ),
+          'add_new' => __('Add New', 'accommodation'),
+          'singular_name' => __( 'Room' )
         ),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'accommodation'),
-        'show_in_rest' => true,
-
+        'menu_icon' => 'dashicons-admin-multisite',
+        ),
+      defaultPostTypeArgs('accommodation')
     )
   );
+  register_post_type( 'menu',
+    array_merge(
+      array(
+        'labels' => array(
+          'name' => __( 'Menu' ),
+          'all_items' => __( 'Menu Items' ),
+          'add_new' => __('Add New', 'menu'),
+          'singular_name' => __( 'Menu Item' )
+        ),
+        'menu_icon' => 'dashicons-food',
+      ),
+      defaultPostTypeArgs('menu')
+    )
+  );
+  register_post_type( 'location',
+    array_merge(
+      array(
+        'labels' => array(
+          'name' => __( 'Locations' ),
+          'add_new' => __('Add New', 'location'),
+          'singular_name' => __( 'Location' )
+        ),
+        'menu_icon' => 'dashicons-location',
+      ),
+      defaultPostTypeArgs('location')
+    )
+  );
+  register_post_type( 'schedule',
+    array_merge(
+      array(
+        'labels' => array(
+          'name' => __( 'Schedule' ),
+          'all_items' => __( 'Schedule Items' ),
+          'add_new' => __('Add New', 'schedule'),
+          'singular_name' => __( 'Schedule Item' )
+        ),
+        'menu_icon' => 'dashicons-schedule',
+      ),
+      defaultPostTypeArgs('location')
+    )
+  );
+  
 }
-add_action( 'init', 'create_custom_post_type' );
+add_action( 'init', 'blissologyCustomPosts' );
 
-/**
- * Admin Config
- */
-// remove_menu_page( 'themes.php' )
+function blissologyRemoveAdminPages() {
+  if ( !is_super_admin() ) {
+    remove_menu_page( 'themes.php' );    
+    remove_menu_page( 'tools.php' );    
+    remove_submenu_page( 'index.php', 'my-sites.php' );      
+    remove_submenu_page( 'options-general.php', 'options-writing.php');
+    remove_submenu_page( 'options-general.php', 'options-reading.php');
+    remove_submenu_page( 'options-general.php', 'options-discussion.php');
+    remove_submenu_page( 'options-general.php', 'options-media.php');
+    remove_submenu_page( 'options-general.php', 'options-privacy.php');
+    remove_submenu_page( 'options-general.php', 'options-permalink.php');
+  }
+  remove_menu_page( 'edit.php' );   
+  remove_menu_page( 'edit-comments.php' );   
+  remove_menu_page( 'upload.php' );   
+}
+add_action( 'admin_menu', 'blissologyRemoveAdminPages' );
+
+function blissologyRemoveAdminBar() {
+  if ( !is_super_admin() ) {
+    show_admin_bar(false);
+  }
+  // add_filter( 'show_admin_bar', '__return_false' );
+}
+add_action('wp_before_admin_bar_render', 'blissologyRemoveAdminBar');
