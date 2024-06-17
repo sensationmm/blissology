@@ -168,6 +168,8 @@ function defaultPostTypeArgs($name) {
     'has_archive' => true,
     'rewrite' => array('slug' => $name),
     'show_in_rest' => true,
+    'rest_base' => $name,
+    'supports' => ['title'],
   ];
 };
 function blissologyCustomPosts() {
@@ -227,6 +229,35 @@ function blissologyCustomPosts() {
     )
   );
   
+  function defaultTaxonomyArgs($nameSingular, $namePlural, $slug) {
+    return [
+      'hierarchical' => true,
+      'labels' => array(
+        'name' => __( $namePlural, 'taxonomy general name' ),
+        'singular_name' => __( $nameSingular, 'taxonomy singular name' ),
+        'search_items' =>  __( "Search {$namePlural}" ),
+        'all_items' => __( "All {$namePlural}" ),
+        'parent_item' => __( "Parent {$nameSingular}" ),
+        'parent_item_colon' => __( "Parent {$nameSingular}:" ),
+        'edit_item' => __( "Edit {$nameSingular}" ),
+        'update_item' => __( "Update {$nameSingular}" ),
+        'add_new_item' => __( "Add New {$nameSingular}" ),
+        'new_item_name' => __( "New {$nameSingular} Name" ),
+        'menu_name' => __( $namePlural ),
+      ),
+      'rewrite' => array(
+        'slug' => $slug, // This controls the base slug that will display before each term
+        'with_front' => false, // Don't display the category base before "/locations/"
+        'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+      ),
+    ];
+  };
+
+  register_taxonomy('menuType', 'menu', defaultTaxonomyArgs('Menu Category', 'Menu Categories', 'menuTypes'));
+
+
+  global $wp_rewrite;
+  $wp_rewrite->set_permalink_structure( '/%postname%/' );
 }
 add_action( 'init', 'blissologyCustomPosts' );
 
@@ -234,6 +265,8 @@ function blissologyRemoveAdminPages() {
   if ( !is_super_admin() ) {
     remove_menu_page( 'themes.php' );    
     remove_menu_page( 'tools.php' );    
+    remove_menu_page( 'plugins.php');
+    remove_menu_page( 'edit.php?post_type=acf-field-group');
     remove_submenu_page( 'index.php', 'my-sites.php' );      
     remove_submenu_page( 'options-general.php', 'options-writing.php');
     remove_submenu_page( 'options-general.php', 'options-reading.php');
@@ -242,9 +275,10 @@ function blissologyRemoveAdminPages() {
     remove_submenu_page( 'options-general.php', 'options-privacy.php');
     remove_submenu_page( 'options-general.php', 'options-permalink.php');
   }
-  remove_menu_page( 'edit.php' );   
+  // remove_menu_page( 'edit.php' );   
   remove_menu_page( 'edit-comments.php' );   
   remove_menu_page( 'upload.php' );   
+  remove_submenu_page( 'edit.php?post_type=acf-field-group','edit.php?post_type=acf-post-type');
 }
 add_action( 'admin_menu', 'blissologyRemoveAdminPages' );
 
@@ -255,3 +289,10 @@ function blissologyRemoveAdminBar() {
   // add_filter( 'show_admin_bar', '__return_false' );
 }
 add_action('wp_before_admin_bar_render', 'blissologyRemoveAdminBar');
+
+// Fix wordpress stripping custom port colon
+add_filter( 'wp_normalize_site_data', function( $data ) {
+    $data['domain'] = str_replace('50011', ':50011', $data['domain']);
+    $data['domain'] = str_replace('::', ':', $data['domain']);
+    return $data;
+}, 50, 1 );
