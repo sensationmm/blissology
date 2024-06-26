@@ -111,6 +111,8 @@ function blissologyCustomPosts()
         'with_front' => false, // Don't display the category base before "/locations/"
         'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
       ),
+
+      'show_in_rest' => true,
     ];
   };
 
