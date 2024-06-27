@@ -19,7 +19,7 @@ function defaultPostTypeArgs($name, $taxonomies = [])
     'rewrite' => array('slug' => $name),
     'show_in_rest' => true,
     'rest_base' => $name,
-    'supports' => array_merge(['title'], $taxonomies),
+    'supports' => array_merge(['title', 'author'], $taxonomies),
   ];
 };
 function blissologyCustomPosts()

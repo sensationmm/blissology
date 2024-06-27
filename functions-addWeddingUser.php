@@ -1,7 +1,21 @@
 <?php
-// Add Wedding/User page
+
+// Add Wedding / User page
+
+function addDeadline($deadline, string $weddingID, string $weddingDate)
+{
+  $timeframe = $deadline['timeframe']['value'];
+  $time = $deadline['time'];
+  $date = date('Y-m-d', strtotime('-' . $time . ' ' . $timeframe, strtotime($weddingDate)));
+
+  $dl = array('name' => $deadline['event'], 'date' => $date, 'payment_deadline' => $deadline['payment_deadline']);
+
+  add_row('deadlines', $dl, $weddingID);
+}
+
 function addWeddingUser()
 {
+  $error = '';
   if (isset($_POST['action']) && $_POST['action'] === 'createWeddingUser') {
     $person1 = $_POST["person1"];
     $person2 = $_POST["person2"];
@@ -47,6 +61,13 @@ function addWeddingUser()
         $weddingDateID = update_field('wedding_date', $weddingDate, $weddingID);
         if (!$weddingDateID) {
           $error = 'Wedding meta failure';
+        } else {
+          // Add wedding deadlines
+          $deadlines = get_field('deadlines_config', 'option');
+
+          foreach ($deadlines as $dl) {
+            addDeadline($dl, $weddingID, $weddingDate);
+          }
         }
       }
     }

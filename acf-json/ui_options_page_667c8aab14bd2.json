@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_667c8aab14bd2",
+    "title": "Config",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Config",
+    "menu_slug": "config",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Config",
+    "position": 58,
+    "redirect": 0,
+    "description": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-generic"
+    },
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1719438282
+}

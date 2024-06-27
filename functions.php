@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 /**
  * blissology functions and definitions
@@ -174,7 +177,9 @@ require get_template_directory() . '/functions-addWeddingUser.php';
 
 // Fix wordpress stripping custom port colon
 add_filter('wp_normalize_site_data', function ($data) {
-  $data['domain'] = str_replace('50011', ':50011', $data['domain']);
-  $data['domain'] = str_replace('::', ':', $data['domain']);
+  if (array_key_exists('domain', $data)) {
+    $data['domain'] = str_replace('50011', ':50011', $data['domain']);
+    $data['domain'] = str_replace('::', ':', $data['domain']);
+  }
   return $data;
 }, 50, 1);
