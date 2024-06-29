@@ -175,6 +175,16 @@ require get_template_directory() . '/functions-customPostTypes.php';
 require get_template_directory() . '/functions-customUserTypes.php';
 require get_template_directory() . '/functions-addWeddingUser.php';
 
+function
+add_cors_http_header()
+{
+  add_action('rest_pre_serve_request', function () {
+    header('Access-Control-Allow-Headers: Authorization, Content-Type, X-WP-Wpml-Language', true);
+    header("Access-Control-Allow-Origin: *");
+  });
+}
+add_action('rest_api_init', 'add_cors_http_header');
+
 // Fix wordpress stripping custom port colon
 add_filter('wp_normalize_site_data', function ($data) {
   if (array_key_exists('domain', $data)) {
