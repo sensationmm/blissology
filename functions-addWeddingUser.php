@@ -7,8 +7,9 @@ function addDeadline($deadline, string $weddingID, string $weddingDate)
   $timeframe = $deadline['timeframe']['value'];
   $time = $deadline['time'];
   $date = date('Y-m-d', strtotime('-' . $time . ' ' . $timeframe, strtotime($weddingDate)));
+  $attach = $deadline['attach_to'];
 
-  $dl = array('name' => $deadline['event'], 'date' => $date, 'payment_deadline' => $deadline['payment_deadline']);
+  $dl = array('name' => $deadline['event'], 'date' => $date, 'payment_deadline' => $deadline['payment_deadline'], 'attach_to' => $attach);
 
   add_row('deadlines', $dl, $weddingID);
 }

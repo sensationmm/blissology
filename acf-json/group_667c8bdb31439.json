@@ -117,6 +117,36 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_667c8bdbfde09"
+                },
+                {
+                    "key": "field_6682f9d9d1ef9",
+                    "label": "Attach To",
+                    "name": "attach_to",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Show this deadline on the selected screen",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "accommodation": "Accommodation",
+                        "guests": "Guests",
+                        "menu": "Menu",
+                        "schedule": "Schedule",
+                        "suppliers": "Suppliers"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "multiple": 1,
+                    "allow_null": 1,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_667c8bdbfde09"
                 }
             ]
         }
@@ -154,5 +184,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719446553
+    "modified": 1719860001
 }

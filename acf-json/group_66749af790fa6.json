@@ -39,7 +39,7 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Add Deadline",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -49,7 +49,7 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -70,7 +70,7 @@
                     "aria-label": "",
                     "type": "date_picker",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -101,6 +101,36 @@
                     "ui_on_text": "",
                     "ui_off_text": "",
                     "ui": 1,
+                    "parent_repeater": "field_667c992e4e03e"
+                },
+                {
+                    "key": "field_6682f747b2d61",
+                    "label": "Attach To",
+                    "name": "attach_to",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Show this deadline on the selected screens",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "accommodation": "Accommodation",
+                        "guests": "Guests",
+                        "menu": "Menu",
+                        "schedule": "Schedule",
+                        "suppliers": "Suppliers"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "multiple": 1,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
                     "parent_repeater": "field_667c992e4e03e"
                 }
             ]
@@ -290,6 +320,167 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_668089f3a598f",
+            "label": "Suppliers",
+            "name": "suppliers",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Supplier",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66808a05a5990",
+                    "label": "Supplier Type",
+                    "name": "supplier_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "cakeMaker": "Cake Maker",
+                        "caterer": "Caterer",
+                        "coordinator": "Wedding Co-ordinator",
+                        "entertainment": "Entertainment",
+                        "florist": "Florist",
+                        "photographer": "Photographer",
+                        "stylist": "Stylist",
+                        "videographer": "Videographer"
+                    },
+                    "default_value": false,
+                    "return_format": "array",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_668089f3a598f"
+                },
+                {
+                    "key": "field_66808b3aa5991",
+                    "label": "Name",
+                    "name": "supplier_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_668089f3a598f"
+                },
+                {
+                    "key": "field_66808b47a5992",
+                    "label": "Contact Name",
+                    "name": "supplier_contact_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_668089f3a598f"
+                },
+                {
+                    "key": "field_66808b52a5993",
+                    "label": "Contact Telephone",
+                    "name": "supplier_contact_telephone",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_668089f3a598f"
+                },
+                {
+                    "key": "field_66808b6ca5994",
+                    "label": "Contact Email Address",
+                    "name": "supplier_contact_email",
+                    "aria-label": "",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_668089f3a598f"
+                },
+                {
+                    "key": "field_66808b9ca5995",
+                    "label": "Notes",
+                    "name": "supplier_notes",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_668089f3a598f"
+                }
+            ]
         }
     ],
     "location": [
@@ -325,5 +516,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1719624051
+    "modified": 1719861639
 }
