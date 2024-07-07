@@ -9,7 +9,7 @@
             "aria-label": "",
             "type": "number",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -23,6 +23,90 @@
             "step": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_66859df4b38d1",
+            "label": "Beds",
+            "name": "beds",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_666b86a54c705",
+                    "label": "Num Double Beds",
+                    "name": "double_beds",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_666cb61f3b1c6",
+                    "label": "Num Single Beds",
+                    "name": "single_beds",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_666cb6303b1c7",
+                    "label": "Num Bunk Beds",
+                    "name": "bunk_beds",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
         },
         {
             "key": "field_666b94986b7a8",
@@ -44,8 +128,11 @@
                 "shower": "Shower",
                 "bath": "Bath",
                 "sofa": "Sofa",
+                "chairs": "Chairs",
                 "minibar": "Minibar",
-                "teaCoffee": "Tea & Coffee"
+                "teaCoffee": "Tea & Coffee",
+                "patio": "Patio",
+                "balcony": "Balcony"
             },
             "default_value": [],
             "return_format": "label",
@@ -54,72 +141,6 @@
             "toggle": 0,
             "save_custom": 0,
             "custom_choice_button_text": "Add new choice"
-        },
-        {
-            "key": "field_666b86a54c705",
-            "label": "Num Double Beds",
-            "name": "double_beds",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_666cb61f3b1c6",
-            "label": "Num Single Beds",
-            "name": "single_beds",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_666cb6303b1c7",
-            "label": "Num Bunk Beds",
-            "name": "bunk_beds",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -155,5 +176,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1718413103
+    "modified": 1720032925
 }

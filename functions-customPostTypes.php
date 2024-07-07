@@ -117,6 +117,7 @@ function blissologyCustomPosts()
   };
 
   register_taxonomy('menuType', 'menu', defaultTaxonomyArgs('Menu Category', 'Menu Categories', 'menuTypes'));
+  register_taxonomy('roomLocation', 'accommodation', defaultTaxonomyArgs('Room Location', 'Room Locations', 'roomLocations'));
 
   global $wp_rewrite;
   $wp_rewrite->set_permalink_structure('/%postname%/');
