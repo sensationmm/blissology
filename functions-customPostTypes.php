@@ -43,6 +43,26 @@ function blissologyCustomPosts()
     )
   );
   register_post_type(
+    'menu',
+    array_merge(
+      array(
+        'labels' => defaultPostLabels('menu', 'Menu', 'Menu Item', 'Menu Items'),
+        'menu_icon' => 'dashicons-food',
+      ),
+      defaultPostTypeArgs('menu')
+    )
+  );
+  register_post_type(
+    'upgrade',
+    array_merge(
+      array(
+        'labels' => defaultPostLabels('upgrade', 'Upgrades', 'Upgrade', 'Upgrades'),
+        'menu_icon' => 'dashicons-paperclip',
+      ),
+      defaultPostTypeArgs('upgrade')
+    )
+  );
+  register_post_type(
     'accommodation',
     array_merge(
       array(
@@ -59,13 +79,13 @@ function blissologyCustomPosts()
     )
   );
   register_post_type(
-    'menu',
+    'schedule',
     array_merge(
       array(
-        'labels' => defaultPostLabels('menu', 'Menu', 'Menu Item', 'Menu Items'),
-        'menu_icon' => 'dashicons-food',
+        'labels' => defaultPostLabels('schedule', 'Schedule', 'Schedule Item', 'Schedule Items'),
+        'menu_icon' => 'dashicons-schedule',
       ),
-      defaultPostTypeArgs('menu')
+      defaultPostTypeArgs('location')
     )
   );
   register_post_type(
@@ -74,16 +94,6 @@ function blissologyCustomPosts()
       array(
         'labels' => defaultPostLabels('location', 'Locations', 'Location', 'Locations'),
         'menu_icon' => 'dashicons-location',
-      ),
-      defaultPostTypeArgs('location')
-    )
-  );
-  register_post_type(
-    'schedule',
-    array_merge(
-      array(
-        'labels' => defaultPostLabels('schedule', 'Schedule', 'Schedule Item', 'Schedule Items'),
-        'menu_icon' => 'dashicons-schedule',
       ),
       defaultPostTypeArgs('location')
     )
@@ -118,6 +128,7 @@ function blissologyCustomPosts()
 
   register_taxonomy('menuType', 'menu', defaultTaxonomyArgs('Menu Category', 'Menu Categories', 'menuTypes'));
   register_taxonomy('roomLocation', 'accommodation', defaultTaxonomyArgs('Room Location', 'Room Locations', 'roomLocations'));
+  register_taxonomy('upgradeType', 'upgrade', defaultTaxonomyArgs('Upgrade Type', 'Upgrade Types', 'upgradeTypes'));
 
   global $wp_rewrite;
   $wp_rewrite->set_permalink_structure('/%postname%/');
