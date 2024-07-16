@@ -42,7 +42,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -51,5 +51,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1720215526
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1720739556
 }

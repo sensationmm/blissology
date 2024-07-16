@@ -32,3 +32,14 @@ function blissologyRemoveAdminBar()
   // add_filter( 'show_admin_bar', '__return_false' );
 }
 add_action('wp_before_admin_bar_render', 'blissologyRemoveAdminBar');
+
+add_action("rest_api_init", function () {
+  register_rest_route("/wp/v2/options", "/all", [
+    "methods" => "GET",
+    "callback" => "acf_options_route",
+  ]);
+});
+function acf_options_route()
+{
+  return get_fields('options');
+};

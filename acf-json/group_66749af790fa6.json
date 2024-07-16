@@ -3,6 +3,25 @@
     "title": "Wedding",
     "fields": [
         {
+            "key": "field_66903a418ebb8",
+            "label": "Basic",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
             "key": "field_66749af7bb172",
             "label": "Wedding Date",
             "name": "wedding_date",
@@ -118,7 +137,12 @@
                             "prepend": "",
                             "append": ""
                         }
-                    ]
+                    ],
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
                 },
                 {
                     "key": "field_667db12f16971",
@@ -202,375 +226,19 @@
                             "prepend": "",
                             "append": ""
                         }
-                    ]
+                    ],
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
                 }
-            ]
-        },
-        {
-            "key": "field_6685871ef8572",
-            "label": "Dining",
-            "name": "dining",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "row",
-            "sub_fields": [
-                {
-                    "key": "field_66858736f8573",
-                    "label": "Reception",
-                    "name": "reception",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Row",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_66858799f8574",
-                            "label": "Choice",
-                            "name": "choice",
-                            "aria-label": "",
-                            "type": "post_object",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "menu"
-                            ],
-                            "post_status": [
-                                "publish"
-                            ],
-                            "taxonomy": [
-                                "menuType:canapes"
-                            ],
-                            "return_format": "object",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "bidirectional": 0,
-                            "ui": 1,
-                            "bidirectional_target": [],
-                            "parent_repeater": "field_66858736f8573"
-                        }
-                    ]
-                },
-                {
-                    "key": "field_6689f6259b00e",
-                    "label": "Dinner",
-                    "name": "dinner",
-                    "aria-label": "",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_6689f62f9b00f",
-                            "label": "Starter",
-                            "name": "starter",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "",
-                            "pagination": 0,
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Add Row",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_6689f6629b010",
-                                    "label": "Choice",
-                                    "name": "choice",
-                                    "aria-label": "",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "menu"
-                                    ],
-                                    "post_status": [
-                                        "publish"
-                                    ],
-                                    "taxonomy": [
-                                        "menuType:starter"
-                                    ],
-                                    "return_format": "object",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "bidirectional": 0,
-                                    "ui": 1,
-                                    "bidirectional_target": [],
-                                    "parent_repeater": "field_6689f62f9b00f"
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6689f6c19b011",
-                            "label": "Main",
-                            "name": "main",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "",
-                            "pagination": 0,
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Add Row",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_6689f6c19b016",
-                                    "label": "Choice",
-                                    "name": "choice",
-                                    "aria-label": "",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "menu"
-                                    ],
-                                    "post_status": [
-                                        "publish"
-                                    ],
-                                    "taxonomy": [
-                                        "menuType:main"
-                                    ],
-                                    "return_format": "object",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "bidirectional": 0,
-                                    "ui": 1,
-                                    "bidirectional_target": [],
-                                    "parent_repeater": "field_6689f6c19b011"
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6689f6e69b017",
-                            "label": "Sides",
-                            "name": "sides",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "",
-                            "pagination": 0,
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Add Row",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_6689f6e69b01c",
-                                    "label": "Choice",
-                                    "name": "choice",
-                                    "aria-label": "",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "menu"
-                                    ],
-                                    "post_status": [
-                                        "publish"
-                                    ],
-                                    "taxonomy": [
-                                        "menuType:sides"
-                                    ],
-                                    "return_format": "object",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "bidirectional": 0,
-                                    "ui": 1,
-                                    "bidirectional_target": [],
-                                    "parent_repeater": "field_6689f6e69b017"
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_6689f7009b01d",
-                            "label": "Dessert",
-                            "name": "dessert",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "",
-                            "pagination": 0,
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Add Row",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_6689f7009b022",
-                                    "label": "Choice",
-                                    "name": "choice",
-                                    "aria-label": "",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "menu"
-                                    ],
-                                    "post_status": [
-                                        "publish"
-                                    ],
-                                    "taxonomy": [
-                                        "menuType:dessert"
-                                    ],
-                                    "return_format": "object",
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "bidirectional": 0,
-                                    "ui": 1,
-                                    "bidirectional_target": [],
-                                    "parent_repeater": "field_6689f7009b01d"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "key": "field_6689deedd4158",
-                    "label": "Evening Food",
-                    "name": "evening",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Row",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_6689deedd415d",
-                            "label": "Choice",
-                            "name": "choice",
-                            "aria-label": "",
-                            "type": "post_object",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "menu"
-                            ],
-                            "post_status": [
-                                "publish"
-                            ],
-                            "taxonomy": [
-                                "menuType:evening-menu"
-                            ],
-                            "return_format": "object",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "bidirectional": 0,
-                            "ui": 1,
-                            "bidirectional_target": [],
-                            "parent_repeater": "field_6689deedd4158"
-                        }
-                    ]
-                }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         },
         {
             "key": "field_667c992e4e03e",
@@ -586,10 +254,13 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_repeater_stylised_button": 1,
             "layout": "table",
             "pagination": 0,
+            "acfe_settings": "",
             "min": 0,
             "max": 0,
+            "acfe_permissions": "",
             "collapsed": "",
             "button_label": "Add Deadline",
             "rows_per_page": 20,
@@ -674,7 +345,8 @@
                         "guests": "Guests",
                         "menu": "Menu",
                         "schedule": "Schedule",
-                        "suppliers": "Suppliers"
+                        "suppliers": "Suppliers",
+                        "upgrades": "Upgrades"
                     },
                     "default_value": [],
                     "return_format": "value",
@@ -683,13 +355,836 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
                     "parent_repeater": "field_667c992e4e03e"
                 }
             ]
         },
         {
-            "key": "field_668089f3a598f",
+            "key": "field_66903a73a7ee8",
+            "label": "Menu",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_6685871ef8572",
+            "label": "",
+            "name": "menuChoices",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_settings": "",
+            "acfe_permissions": "",
+            "sub_fields": [
+                {
+                    "key": "field_66858736f8573",
+                    "label": "Reception",
+                    "name": "reception",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_repeater_stylised_button": 1,
+                    "layout": "table",
+                    "pagination": 0,
+                    "acfe_settings": "",
+                    "min": 0,
+                    "max": 0,
+                    "acfe_permissions": "",
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_66858799f8574",
+                            "label": "Choice",
+                            "name": "choice",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "menu"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": [
+                                "menuType:canapes"
+                            ],
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
+                            "save_custom": 0,
+                            "save_post_type": "",
+                            "save_post_status": "",
+                            "parent_repeater": "field_66858736f8573"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6689f6259b00e",
+                    "label": "Dinner",
+                    "name": "dinner",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_6689f62f9b00f",
+                            "label": "Starter",
+                            "name": "starter",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6689f6629b010",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:starter"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_custom": 0,
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_6689f62f9b00f"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_6689f6c19b011",
+                            "label": "Main",
+                            "name": "main",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6689f6c19b016",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:main"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_custom": 0,
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_6689f6c19b011"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_6689f6e69b017",
+                            "label": "Sides",
+                            "name": "sides",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6689f6e69b01c",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:sides"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_custom": 0,
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_6689f6e69b017"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_6689f7009b01d",
+                            "label": "Dessert",
+                            "name": "dessert",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6689f7009b022",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:dessert"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_custom": 0,
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_6689f7009b01d"
+                                }
+                            ]
+                        }
+                    ],
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
+                },
+                {
+                    "key": "field_66903e4b532cb",
+                    "label": "Kids",
+                    "name": "kids",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_settings": "",
+                    "acfe_permissions": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_66903e4b532e4",
+                            "label": "Reception",
+                            "name": "reception",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66903e4b532e5",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:reception-kids-menu"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "save_custom": 0,
+                                    "acfe_bidirectional": {
+                                        "acfe_bidirectional_enabled": "0"
+                                    },
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_66903e4b532e4"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_66903e4b532e0",
+                            "label": "Starter",
+                            "name": "starter",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66903e4b532e1",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:starter-kids-menu"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "save_custom": 0,
+                                    "acfe_bidirectional": {
+                                        "acfe_bidirectional_enabled": "0"
+                                    },
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_66903e4b532e0"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_66903e4b532e2",
+                            "label": "Main",
+                            "name": "main",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66903e4b532e3",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:main-course-kids-menu"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "save_custom": 0,
+                                    "acfe_bidirectional": {
+                                        "acfe_bidirectional_enabled": "0"
+                                    },
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_66903e4b532e2"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_66903e4b532e6",
+                            "label": "Dessert",
+                            "name": "dessert",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66903e4b532e7",
+                                    "label": "Choice",
+                                    "name": "choice",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_permissions": "",
+                                    "post_type": [
+                                        "menu"
+                                    ],
+                                    "post_status": [
+                                        "publish"
+                                    ],
+                                    "taxonomy": [
+                                        "menuType:dessert-kids-menu"
+                                    ],
+                                    "return_format": "object",
+                                    "multiple": 0,
+                                    "save_custom": 0,
+                                    "acfe_bidirectional": {
+                                        "acfe_bidirectional_enabled": "0"
+                                    },
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "allow_null": 0,
+                                    "bidirectional": 0,
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "save_post_type": "",
+                                    "save_post_status": "",
+                                    "parent_repeater": "field_66903e4b532e6"
+                                }
+                            ]
+                        }
+                    ],
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
+                },
+                {
+                    "key": "field_6689deedd4158",
+                    "label": "Evening Food",
+                    "name": "evening",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6689deedd415d",
+                            "label": "Choice",
+                            "name": "choice",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "menu"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": [
+                                "menuType:evening-menu"
+                            ],
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
+                            "save_custom": 0,
+                            "save_post_type": "",
+                            "save_post_status": "",
+                            "parent_repeater": "field_6689deedd4158"
+                        }
+                    ],
+                    "acfe_repeater_stylised_button": 0
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_66903abec3db1",
+            "label": "Upgrades",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_6690156b3590f",
+            "label": "",
+            "name": "upgradeChoices",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "acfe_settings": "",
+            "min": 0,
+            "max": 0,
+            "acfe_permissions": "",
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6690156b35914",
+                    "label": "Choice",
+                    "name": "choice",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "upgrade"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "save_custom": 0,
+                    "save_post_type": "",
+                    "save_post_status": "",
+                    "parent_repeater": "field_6690156b3590f"
+                }
+            ]
+        },
+        {
+            "key": "field_66903adbc3db2",
             "label": "Suppliers",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_668089f3a598f",
+            "label": "",
             "name": "suppliers",
             "aria-label": "",
             "type": "repeater",
@@ -701,10 +1196,13 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_repeater_stylised_button": 1,
             "layout": "row",
             "pagination": 0,
+            "acfe_settings": "",
             "min": 0,
             "max": 0,
+            "acfe_permissions": "",
             "collapsed": "",
             "button_label": "Add Supplier",
             "rows_per_page": 20,
@@ -740,6 +1238,8 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
                     "parent_repeater": "field_668089f3a598f"
                 },
                 {
@@ -844,6 +1344,7 @@
                     "rows": "",
                     "placeholder": "",
                     "new_lines": "",
+                    "acfe_textarea_code": 0,
                     "parent_repeater": "field_668089f3a598f"
                 }
             ]
@@ -861,7 +1362,7 @@
     "menu_order": 0,
     "position": "normal",
     "style": "seamless",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "field",
     "hide_on_screen": [
         "permalink",
@@ -882,5 +1383,13 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1720321177
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 1,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1721016664
 }

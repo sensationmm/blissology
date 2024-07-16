@@ -62,6 +62,16 @@ function blissologyCustomPosts()
       defaultPostTypeArgs('upgrade')
     )
   );
+
+  function addUpgradeIsUpgrade($postID)
+  {
+    if (get_post_type($postID) == 'upgrade') {
+      update_field('is_upgrade', 1, $postID);
+    }
+  }
+  add_action('wp_insert_post', 'addUpgradeIsUpgrade');
+
+
   register_post_type(
     'accommodation',
     array_merge(
