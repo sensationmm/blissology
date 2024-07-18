@@ -1160,6 +1160,32 @@
                     "save_post_type": "",
                     "save_post_status": "",
                     "parent_repeater": "field_6690156b3590f"
+                },
+                {
+                    "key": "field_66982f78a93d9",
+                    "label": "Order for",
+                    "name": "order",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "min": "",
+                    "max": "",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "people \/ % of guests",
+                    "parent_repeater": "field_6690156b3590f"
                 }
             ]
         },
@@ -1348,6 +1374,122 @@
                     "parent_repeater": "field_668089f3a598f"
                 }
             ]
+        },
+        {
+            "key": "field_6696dd806fc1b",
+            "label": "Payments",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_6696dd8d6fc1c",
+            "label": "",
+            "name": "payments",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "acfe_settings": "",
+            "min": 0,
+            "max": 0,
+            "acfe_permissions": "",
+            "collapsed": "",
+            "button_label": "Add Payment",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6696de2c9a679",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This will be displayed on the invoice if provided",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6696dd8d6fc1c"
+                },
+                {
+                    "key": "field_6696dd9d6fc1d",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "F j, Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1,
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "parent_repeater": "field_6696dd8d6fc1c"
+                },
+                {
+                    "key": "field_6696ddde6fc1f",
+                    "label": "Amount",
+                    "name": "amount",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "£",
+                    "append": "",
+                    "parent_repeater": "field_6696dd8d6fc1c"
+                }
+            ]
         }
     ],
     "location": [
@@ -1391,5 +1533,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721016664
+    "modified": 1721253127
 }

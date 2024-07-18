@@ -411,13 +411,6 @@
                 "operator": "==",
                 "value": "upgrade"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "menu"
-            }
         ]
     ],
     "menu_order": 3,
@@ -451,5 +444,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721088313
+    "modified": 1721256440
 }
