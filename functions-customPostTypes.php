@@ -53,6 +53,16 @@ function blissologyCustomPosts()
     )
   );
   register_post_type(
+    'drink',
+    array_merge(
+      array(
+        'labels' => defaultPostLabels('drink', 'Drink', 'Drink Item', 'Drinks Items'),
+        'menu_icon' => 'dashicons-coffee',
+      ),
+      defaultPostTypeArgs('drink')
+    )
+  );
+  register_post_type(
     'upgrade',
     array_merge(
       array(
@@ -137,6 +147,7 @@ function blissologyCustomPosts()
   };
 
   register_taxonomy('menuType', 'menu', defaultTaxonomyArgs('Menu Category', 'Menu Categories', 'menuTypes'));
+  register_taxonomy('drinkType', 'drink', defaultTaxonomyArgs('Drink Category', 'Drink Categories', 'drinkTypes'));
   register_taxonomy('roomLocation', 'accommodation', defaultTaxonomyArgs('Room Location', 'Room Locations', 'roomLocations'));
   register_taxonomy('upgradeType', 'upgrade', defaultTaxonomyArgs('Upgrade Type', 'Upgrade Types', 'upgradeTypes'));
 

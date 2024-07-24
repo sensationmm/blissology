@@ -214,7 +214,7 @@
                 },
                 {
                     "key": "field_669052dbe3ccf",
-                    "label": "Package Settings",
+                    "label": "Food Package Settings",
                     "name": "",
                     "aria-label": "",
                     "type": "tab",
@@ -232,11 +232,11 @@
                 },
                 {
                     "key": "field_66949eaefa27e",
-                    "label": "Packages",
+                    "label": "",
                     "name": "packages",
                     "aria-label": "",
                     "type": "repeater",
-                    "instructions": "",
+                    "instructions": "This package will be applied to all items selected under Food Package. If higher tier packages are available add them in ascending order.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -714,19 +714,20 @@
                     },
                     "choices": {
                         "accommodation": "Accommodation",
+                        "drink": "Drinks Package",
                         "guests": "Guests",
-                        "menu": "Menu",
+                        "menu": "Food Package",
                         "schedule": "Schedule",
                         "suppliers": "Suppliers"
                     },
                     "default_value": [],
                     "return_format": "value",
                     "multiple": 1,
+                    "allow_custom": 0,
+                    "placeholder": "",
                     "allow_null": 1,
                     "ui": 1,
                     "ajax": 0,
-                    "placeholder": "",
-                    "allow_custom": 0,
                     "search_placeholder": "",
                     "parent_repeater": "field_667c8bdbfde09"
                 }
@@ -773,5 +774,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721084125
+    "modified": 1721673864
 }

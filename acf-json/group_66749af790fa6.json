@@ -422,7 +422,7 @@
                     "max": 0,
                     "acfe_permissions": "",
                     "collapsed": "",
-                    "button_label": "Add Row",
+                    "button_label": "Add Reception Choice",
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
@@ -499,7 +499,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Starter Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -560,7 +560,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Main Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -621,7 +621,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Sides Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -682,7 +682,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Dessert Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -770,7 +770,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Kids Reception Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -837,7 +837,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Kids Starter Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -904,7 +904,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Kids Main Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -971,7 +971,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Kids Dessert Choice",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -1035,12 +1035,15 @@
                         "class": "",
                         "id": ""
                     },
+                    "acfe_repeater_stylised_button": 1,
                     "layout": "table",
                     "pagination": 0,
+                    "acfe_settings": "",
                     "min": 0,
                     "max": 0,
+                    "acfe_permissions": "",
                     "collapsed": "",
-                    "button_label": "Add Row",
+                    "button_label": "Add Evening Food Choice",
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
@@ -1077,13 +1080,96 @@
                             "save_post_status": "",
                             "parent_repeater": "field_6689deedd4158"
                         }
-                    ],
-                    "acfe_repeater_stylised_button": 0
+                    ]
                 }
             ],
             "acfe_group_modal_close": 0,
             "acfe_group_modal_button": "",
             "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_66996b2a6e11a",
+            "label": "Drinks Package",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_66996b66eecd2",
+            "label": "",
+            "name": "drinkChoices",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "acfe_settings": "",
+            "min": 0,
+            "max": 0,
+            "acfe_permissions": "",
+            "collapsed": "",
+            "button_label": "Add Drinks Choice",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66996b66eecd8",
+                    "label": "Choice",
+                    "name": "choice",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "drink"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 0,
+                    "save_custom": 0,
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "allow_null": 0,
+                    "acfe_permissions": "",
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "save_post_type": "",
+                    "save_post_status": "",
+                    "parent_repeater": "field_66996b66eecd2"
+                }
+            ]
         },
         {
             "key": "field_66903abec3db1",
@@ -1126,7 +1212,7 @@
             "max": 0,
             "acfe_permissions": "",
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Add Upgrade Choice",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -1533,5 +1619,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721253127
+    "modified": 1721330941
 }
