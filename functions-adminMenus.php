@@ -43,3 +43,9 @@ function acf_options_route()
 {
   return get_fields('options');
 };
+
+add_action('admin_enqueue_scripts', 'load_admin_styles');
+function load_admin_styles()
+{
+  wp_enqueue_style('admin_css', get_template_directory_uri() . '/admin-style.css', false, '1.0.0');
+}

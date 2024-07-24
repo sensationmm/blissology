@@ -1,0 +1,5 @@
+/** Custom hides **/
+
+.taxonomy-upgradeType .permalink {
+    display: none;
+}
