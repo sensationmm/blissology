@@ -1328,7 +1328,7 @@
                     "aria-label": "",
                     "type": "post_object",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -1350,6 +1350,7 @@
                     "acfe_settings": "",
                     "acfe_validate": "",
                     "allow_null": 0,
+                    "acfe_permissions": "",
                     "bidirectional": 0,
                     "ui": 1,
                     "bidirectional_target": [],
@@ -1363,7 +1364,7 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -1374,6 +1375,7 @@
                     "acfe_settings": "",
                     "acfe_validate": "",
                     "maxlength": "",
+                    "acfe_permissions": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -1433,7 +1435,7 @@
                     "aria-label": "",
                     "type": "select",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -1447,14 +1449,15 @@
                     "default_value": false,
                     "return_format": "value",
                     "multiple": 0,
-                    "allow_custom": 0,
-                    "search_placeholder": "",
                     "acfe_settings": "",
                     "acfe_validate": "",
                     "allow_null": 0,
+                    "acfe_permissions": "",
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
                     "parent_repeater": "field_66a8159f10921"
                 }
             ]
@@ -1923,5 +1926,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1722291951
+    "modified": 1722300851
 }
