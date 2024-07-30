@@ -14,6 +14,19 @@ function addDeadline($deadline, string $weddingID, string $weddingDate)
   add_row('deadlines', $dl, $weddingID);
 }
 
+function addRoomAllocation(string $roomID, string $weddingID)
+{
+  $alloc = array(
+    'room_id' => $roomID,
+    'guest_name' => '',
+    'contact_name' => '',
+    'contact_number' => '',
+    'payment' => 'invoice',
+  );
+
+  add_row('room_allocations', $alloc, $weddingID);
+}
+
 function addWeddingUser()
 {
   $error = '';
@@ -68,6 +81,12 @@ function addWeddingUser()
 
           foreach ($deadlines as $dl) {
             addDeadline($dl, $weddingID, $weddingDate);
+          }
+
+          // Add Rooms Allocations
+          $rooms = get_posts(array('post_type' => 'accommodation', 'numberposts' => -1));
+          foreach ($rooms as $room) {
+            addRoomAllocation($room->ID, $weddingID);
           }
         }
       }
