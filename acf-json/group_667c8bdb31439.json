@@ -555,6 +555,350 @@
                             "parent_repeater": "field_66949eaefa27e"
                         }
                     ]
+                },
+                {
+                    "key": "field_66a2c232eadc4",
+                    "label": "Drink Package Settings",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0
+                },
+                {
+                    "key": "field_66a2c24aeadc5",
+                    "label": "",
+                    "name": "drinks_packages",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "This package will be applied to all items selected under Food Package. If higher tier packages are available add them in ascending order.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_repeater_stylised_button": 1,
+                    "layout": "block",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Package",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_66a2c24aeadc8",
+                            "label": "Description",
+                            "name": "package_description",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "This will be the label on the invoice",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_66a2c24aeadc5"
+                        },
+                        {
+                            "key": "field_66a2c24aeadc9",
+                            "label": "Cost",
+                            "name": "package_cost",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": 0,
+                            "max": "",
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "£",
+                            "append": "pp",
+                            "parent_repeater": "field_66a2c24aeadc5"
+                        },
+                        {
+                            "key": "field_66a2c24aeadca",
+                            "label": "",
+                            "name": "package_price_calculation",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66a2c24aeadcb",
+                                    "label": "Price Calculation",
+                                    "name": "timeframe",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "allday": "Number of People - All Day",
+                                        "daytime": "Number of People - Daytime",
+                                        "evening": "Number of People - Evening"
+                                    },
+                                    "default_value": false,
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
+                                },
+                                {
+                                    "key": "field_66a2c24aeadcc",
+                                    "label": "Based On",
+                                    "name": "guest_type",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "all": "All Guests",
+                                        "adults": "Guests - Adults",
+                                        "children": "Guests - Children",
+                                        "babies": "Guests - Babies",
+                                        "suppliers": "Suppliers"
+                                    },
+                                    "default_value": false,
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "allow_custom": 0,
+                                    "search_placeholder": ""
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large",
+                            "parent_repeater": "field_66a2c24aeadc5"
+                        },
+                        {
+                            "key": "field_66a2c24aeadcd",
+                            "label": "Choices",
+                            "name": "package_choices",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Choice",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66a2c24aeadce",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_66a2c24aeadcd"
+                                },
+                                {
+                                    "key": "field_66a2c24aeadcf",
+                                    "label": "Items",
+                                    "name": "taxonomy",
+                                    "aria-label": "",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "drinkType",
+                                    "add_term": 0,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "object",
+                                    "field_type": "select",
+                                    "allow_null": 0,
+                                    "acfe_bidirectional": {
+                                        "acfe_bidirectional_enabled": "0"
+                                    },
+                                    "bidirectional": 0,
+                                    "multiple": 0,
+                                    "bidirectional_target": [],
+                                    "parent_repeater": "field_66a2c24aeadcd"
+                                },
+                                {
+                                    "key": "field_66a2c24aeadd0",
+                                    "label": "Minimum Required",
+                                    "name": "minimum",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "Choose if there is a minimum that must be selected",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "min": 0,
+                                    "max": "",
+                                    "placeholder": "",
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_66a2c24aeadcd"
+                                },
+                                {
+                                    "key": "field_66a2c24aeadd1",
+                                    "label": "Maximum Allowed",
+                                    "name": "maximum",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "Choose how many choices are included in the price",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "min": 0,
+                                    "max": "",
+                                    "placeholder": "",
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_66a2c24aeadcd"
+                                },
+                                {
+                                    "key": "field_66a2c24aeadd2",
+                                    "label": "Additional Allowed?",
+                                    "name": "additional_allowed",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Yes",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": "",
+                                    "parent_repeater": "field_66a2c24aeadcd"
+                                },
+                                {
+                                    "key": "field_66a2c24aeadd3",
+                                    "label": "Additional Cost",
+                                    "name": "additional_cost",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_66a2c24aeadd2",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "min": 0,
+                                    "max": "",
+                                    "placeholder": "",
+                                    "step": "",
+                                    "prepend": "£",
+                                    "append": "pp",
+                                    "parent_repeater": "field_66a2c24aeadcd"
+                                }
+                            ],
+                            "parent_repeater": "field_66a2c24aeadc5"
+                        }
+                    ]
                 }
             ],
             "acfe_group_modal_close": 0,
@@ -774,5 +1118,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721673864
+    "modified": 1721944236
 }

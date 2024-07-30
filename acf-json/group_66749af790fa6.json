@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_66903a418ebb8",
-            "label": "Basic",
+            "label": "Basic Info",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -45,7 +45,7 @@
             "name": "guests",
             "aria-label": "",
             "type": "group",
-            "instructions": "",
+            "instructions": "Guest numbers confirmed by the couple",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -54,6 +54,10 @@
                 "id": ""
             },
             "layout": "table",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_settings": "",
+            "acfe_permissions": "",
             "sub_fields": [
                 {
                     "key": "field_667db0cb1696d",
@@ -234,8 +238,6 @@
                     "acfe_group_modal_size": "large"
                 }
             ],
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
             "acfe_group_modal_close": 0,
             "acfe_group_modal_button": "",
             "acfe_group_modal_size": "large"
@@ -246,7 +248,7 @@
             "name": "deadlines",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Deadlines shown to the couple in their portal",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -363,7 +365,7 @@
         },
         {
             "key": "field_66903a73a7ee8",
-            "label": "Menu",
+            "label": "Food Package",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -382,11 +384,11 @@
         },
         {
             "key": "field_6685871ef8572",
-            "label": "",
+            "label": "Food Package",
             "name": "menuChoices",
             "aria-label": "",
             "type": "group",
-            "instructions": "",
+            "instructions": "Food package choices made by the couple",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1108,11 +1110,11 @@
         },
         {
             "key": "field_66996b66eecd2",
-            "label": "",
+            "label": "Drinks Package",
             "name": "drinkChoices",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Drinks package choices made by the couple",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1192,11 +1194,11 @@
         },
         {
             "key": "field_6690156b3590f",
-            "label": "",
+            "label": "Upgrades",
             "name": "upgradeChoices",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Upgrade choices made by the couple",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1276,6 +1278,188 @@
             ]
         },
         {
+            "key": "field_66a8158010920",
+            "label": "Room Allocations",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_66a8159f10921",
+            "label": "Room Allocations",
+            "name": "room_allocations",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "acfe_settings": "",
+            "min": 0,
+            "max": 0,
+            "acfe_permissions": "",
+            "collapsed": "",
+            "button_label": "Add Room Allocation",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66a815b010922",
+                    "label": "Room ID",
+                    "name": "room_id",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "accommodation"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "save_custom": 0,
+                    "save_post_status": "publish",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "save_post_type": "",
+                    "parent_repeater": "field_66a8159f10921"
+                },
+                {
+                    "key": "field_66a8163b10924",
+                    "label": "Guest Name",
+                    "name": "guest_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66a8159f10921"
+                },
+                {
+                    "key": "field_66a8165710925",
+                    "label": "Contact Email",
+                    "name": "contact_email",
+                    "aria-label": "",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66a8159f10921"
+                },
+                {
+                    "key": "field_66a8166510926",
+                    "label": "Contact Number",
+                    "name": "contact_number",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66a8159f10921"
+                },
+                {
+                    "key": "field_66a815ec10923",
+                    "label": "Payment",
+                    "name": "payment",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "guest": "Guest Pays",
+                        "invoice": "Add to Invoice"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_66a8159f10921"
+                }
+            ]
+        },
+        {
             "key": "field_66903adbc3db2",
             "label": "Suppliers",
             "name": "",
@@ -1296,11 +1480,11 @@
         },
         {
             "key": "field_668089f3a598f",
-            "label": "",
+            "label": "Suppliers",
             "name": "suppliers",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Suppliers confirmed by the couple",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1482,11 +1666,11 @@
         },
         {
             "key": "field_6696dd8d6fc1c",
-            "label": "",
+            "label": "Payments",
             "name": "payments",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Add payments received from the couple, which will be displayed as reductions on their invoice",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1576,6 +1760,126 @@
                     "parent_repeater": "field_6696dd8d6fc1c"
                 }
             ]
+        },
+        {
+            "key": "field_66a44c0bbc315",
+            "label": "Custom Invoice Entries",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "key": "field_66a44c17bc316",
+            "label": "Custom Invoice Entries",
+            "name": "custom_invoice",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Here you can add fees for special request accommodations, or negative values for special discounts",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "acfe_settings": "",
+            "min": 0,
+            "max": 0,
+            "acfe_permissions": "",
+            "collapsed": "",
+            "button_label": "Add Invoice Entry",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66a44c31bc317",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66a44c17bc316"
+                },
+                {
+                    "key": "field_66a44c42bc318",
+                    "label": "Quantity",
+                    "name": "quantity",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66a44c17bc316"
+                },
+                {
+                    "key": "field_66a44c72bc319",
+                    "label": "Unit Price",
+                    "name": "unit_price",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "min": "",
+                    "max": "",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "£",
+                    "append": "",
+                    "parent_repeater": "field_66a44c17bc316"
+                }
+            ]
         }
     ],
     "location": [
@@ -1591,7 +1895,7 @@
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
-    "instruction_placement": "field",
+    "instruction_placement": "above_field",
     "hide_on_screen": [
         "permalink",
         "the_content",
@@ -1619,5 +1923,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721330941
+    "modified": 1722291951
 }
