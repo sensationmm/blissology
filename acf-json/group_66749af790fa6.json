@@ -1386,7 +1386,7 @@
                     "label": "Contact Email",
                     "name": "contact_email",
                     "aria-label": "",
-                    "type": "email",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1398,6 +1398,8 @@
                     "default_value": "",
                     "acfe_settings": "",
                     "acfe_validate": "",
+                    "maxlength": "",
+                    "acfe_permissions": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -1408,7 +1410,7 @@
                     "label": "Contact Number",
                     "name": "contact_number",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1420,10 +1422,9 @@
                     "default_value": "",
                     "acfe_settings": "",
                     "acfe_validate": "",
-                    "min": "",
-                    "max": "",
+                    "maxlength": "",
+                    "acfe_permissions": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_66a8159f10921"
@@ -1926,5 +1927,5 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1722300851
+    "modified": 1722369854
 }

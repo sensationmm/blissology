@@ -12,15 +12,123 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
             "message": "",
             "default_value": 0,
-            "ui": 0,
             "ui_on_text": "",
-            "ui_off_text": ""
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_66b12275d6aa6",
+            "label": "Has Options?",
+            "name": "has_options",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b126c651988",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_66b129bb13d98",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b126c651988",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_66b126c651988",
+            "label": "Has Price-Controlling Options?",
+            "name": "has_options_prices",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b12275d6aa6",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_66b12959c0446",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         },
         {
             "key": "field_66905f459a582",
@@ -66,6 +174,11 @@
                         "field": "field_669068388c2c6",
                         "operator": "==",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_66b126c651988",
+                        "operator": "!=",
+                        "value": "1"
                     }
                 ]
             ],
@@ -96,6 +209,11 @@
                         "field": "field_669068388c2c6",
                         "operator": "==",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_66b126c651988",
+                        "operator": "!=",
+                        "value": "1"
                     }
                 ]
             ],
@@ -106,7 +224,7 @@
             },
             "choices": {
                 "set": "Set Fee",
-                "pp": "Per Person"
+                "pp": "Per Person \/ Item"
             },
             "default_value": "",
             "return_format": "value",
@@ -114,6 +232,137 @@
             "other_choice": 0,
             "layout": "horizontal",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_66b128dadcaed",
+            "label": "Options",
+            "name": "options",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b12275d6aa6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Option",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66b128dadcaee",
+                    "label": "Option",
+                    "name": "option",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66b128dadcaed"
+                }
+            ]
+        },
+        {
+            "key": "field_66b11cf385d6a",
+            "label": "Options",
+            "name": "options_prices",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b126c651988",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Option",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66b11d1f85d6b",
+                    "label": "Option",
+                    "name": "option",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66b11cf385d6a"
+                },
+                {
+                    "key": "field_66b1214c85d6c",
+                    "label": "Price",
+                    "name": "price",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "£",
+                    "append": "",
+                    "parent_repeater": "field_66b11cf385d6a"
+                }
+            ]
         },
         {
             "key": "field_66907e20d4e0c",
@@ -163,7 +412,8 @@
                     "choices": {
                         "none": "No minimum",
                         "people": "Number of Guests",
-                        "percentage": "Percentage of Guests"
+                        "percentage": "Percentage of Guests",
+                        "items": "Number of Items"
                     },
                     "default_value": "none",
                     "return_format": "value",
@@ -190,6 +440,13 @@
                                 "operator": "==",
                                 "value": "people"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_6695b80f1e165",
+                                "operator": "==",
+                                "value": "items"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -203,7 +460,7 @@
                     "placeholder": "",
                     "step": "",
                     "prepend": "",
-                    "append": "people"
+                    "append": "people \/ items"
                 },
                 {
                     "key": "field_66907e81d4e0d",
@@ -257,6 +514,18 @@
                     },
                     {
                         "field": "field_669068388c2c6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_669068388c2c6",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_66b126c651988",
                         "operator": "==",
                         "value": "1"
                     }
@@ -335,6 +604,18 @@
                     },
                     {
                         "field": "field_669068388c2c6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_669068388c2c6",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_66b126c651988",
                         "operator": "==",
                         "value": "1"
                     }
@@ -444,5 +725,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721256440
+    "modified": 1722886732
 }
