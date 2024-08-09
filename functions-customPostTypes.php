@@ -93,9 +93,19 @@ function blissologyCustomPosts()
           'singular_name' => __('Room')
         ),
         'labels' => defaultPostLabels('accommodation', 'Accommodation', 'Room', 'Rooms'),
-        'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSIyNHB4IiBmaWxsPSIjZThlYWVkIj48cGF0aCBkPSJNNDAtMjAwdi02MDBoODB2NDAwaDMyMHYtMzIwaDMyMHE2NiAwIDExMyA0N3Q0NyAxMTN2MzYwaC04MHYtMTIwSDEyMHYxMjBINDBabTI0MC0yNDBxLTUwIDAtODUtMzV0LTM1LTg1cTAtNTAgMzUtODV0ODUtMzVxNTAgMCA4NSAzNXQzNSA4NXEwIDUwLTM1IDg1dC04NSAzNVptMjQwIDQwaDMyMHYtMTYwcTAtMzMtMjMuNS01Ni41VDc2MC02NDBINTIwdjI0MFpNMjgwLTUyMHExNyAwIDI4LjUtMTEuNVQzMjAtNTYwcTAtMTctMTEuNS0yOC41VDI4MC02MDBxLTE3IDAtMjguNSAxMS41VDI0MC01NjBxMCAxNyAxMS41IDI4LjVUMjgwLTUyMFptMC00MFptMjQwLTgwdjI0MC0yNDBaIi8+PC9zdmc+',
+        'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2U4ZWFlZCI+PHRpdGxlPmJlZDwvdGl0bGU+PHBhdGggZD0iTTE5LDdIMTFWMTRIM1Y1SDFWMjBIM1YxN0gyMVYyMEgyM1YxMUE0LDQgMCAwLDAgMTksN003LDEzQTMsMyAwIDAsMCAxMCwxMEEzLDMgMCAwLDAgNyw3QTMsMyAwIDAsMCA0LDEwQTMsMyAwIDAsMCA3LDEzWiIgLz48L3N2Zz4=',
       ),
       defaultPostTypeArgs('accommodation')
+    )
+  );
+  register_post_type(
+    'question',
+    array_merge(
+      array(
+        'labels' => defaultPostLabels('question', 'Questions', 'Question', 'Questions'),
+        'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2U4ZWFlZCI+PHRpdGxlPmZvcnVtPC90aXRsZT48cGF0aCBkPSJNMTcsMTJWM0ExLDEgMCAwLDAgMTYsMkgzQTEsMSAwIDAsMCAyLDNWMTdMNiwxM0gxNkExLDEgMCAwLDAgMTcsMTJNMjEsNkgxOVYxNUg2VjE3QTEsMSAwIDAsMCA3LDE4SDE4TDIyLDIyVjdBMSwxIDAgMCwwIDIxLDZaIiAvPjwvc3ZnPg==',
+      ),
+      defaultPostTypeArgs('question')
     )
   );
   register_post_type(
@@ -150,6 +160,7 @@ function blissologyCustomPosts()
   register_taxonomy('drinkType', 'drink', defaultTaxonomyArgs('Drink Category', 'Drink Categories', 'drinkTypes'));
   register_taxonomy('roomLocation', 'accommodation', defaultTaxonomyArgs('Room Location', 'Room Locations', 'roomLocations'));
   register_taxonomy('upgradeType', 'upgrade', defaultTaxonomyArgs('Upgrade Type', 'Upgrade Types', 'upgradeTypes'));
+  register_taxonomy('questionCategory', 'question', defaultTaxonomyArgs('Question Category', 'Question Categories', 'questionCategories'));
 
   global $wp_rewrite;
   $wp_rewrite->set_permalink_structure('/%postname%/');
